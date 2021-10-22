@@ -6,10 +6,20 @@ export default function Card({ max, min, name, img, onClose }) {
   return (
     <div className={Styles.cardCain}>
       <button onClick={onClose}>x</button>
-      <h1>{name}</h1>
+      <span>{name}</span>
+      <div>
+        <label>Min</label>
+        <span>{min}</span>
+      </div>
+      <div>
+        <label>Max</label>
+        <span>{max}</span>
+      </div>
+
+
 
       <div >
-        <p>Min</p>
+        <p></p>
         <p>{min}</p>
         <p>Max</p>
         <p>{max}</p>
