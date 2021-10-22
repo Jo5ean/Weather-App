@@ -1,0 +1,20 @@
+.cardCain {
+    display: grid;
+    grid-template-columns: repet (3, 1fr);
+    grid-template-rows: 1fr 2fr;
+
+    width: 200px;
+    background-color: cornflowerblue;
+    border: 2px solid rgb(13, 68, 94);
+    border-width: 2px;
+    border-radius: 20px;
+    gap: 10px;
+    justify-content: center;
+    /* height: 300px; */
+}
+
+.btnCard{
+
+
+
+}
