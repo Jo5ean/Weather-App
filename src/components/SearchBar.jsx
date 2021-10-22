@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button';
+
+//import Button from 'react-bootstrap/Button';
 import Styles from '../Styles/SearchBar.module.css';
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar({ onSearch }) {    //onsearch llega de app.js
   // acá va tu código
   //const [city, setCity] = useState("");
   /*return (
@@ -26,13 +27,19 @@ export default function SearchBar({ onSearch }) {
       <input type="submit" value="Submit" />
     </form>
   );*/
+  function handleOnSearch(){    //comrpobamos que sea una funcion, de esta manera evitamos que se crashee
+    if(typeof onClose==="function") {
+      const input = document.getElementById("search-bar-input"); //aca estoy obteniendo el valor obtenido de input, osea lo que ingreso en la barra de busqueda
+      onSearch(input.value);
+    }
+  }
 
   return (
     <div className={Styles.container}>
 
-      <input type={"text"} placeholder={"Que ciudad buscas ?"} />
+      <input id={"search-bar-input"} type={"text"} placeholder={"Que ciudad buscas ?"}/>
       {/* <Button variant={'outline-warning'}>Warning</Button> */}
-      <button className={Styles.btnSearch} onClick={(input) => onSearch('Ciudad de') }> Agregar </button>
+      <button className={Styles.btnSearch} onClick={handleOnSearch}> Agregar </button>
     </div>
   );
 }
