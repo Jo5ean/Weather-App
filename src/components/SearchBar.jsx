@@ -3,6 +3,8 @@ import React from "react";
 //import Button from 'react-bootstrap/Button';
 import Styles from '../Styles/SearchBar.module.css';
 
+import {FiSearch} from "react-icons/fi";
+
 export default function SearchBar({ onSearch }) {    //onsearch llega de app.js
   // acá va tu código
   //const [city, setCity] = useState("");
@@ -36,10 +38,11 @@ export default function SearchBar({ onSearch }) {    //onsearch llega de app.js
 
   return (
     <div className={Styles.searchBar }>
-
-      <input id={"search-bar-input"}/>
+      <input placeholder='Ciuedad ... ' id={"search-bar-input"}/>
       {/* <Button variant={'outline-warning'}>Warning</Button> */}
-      <button onClick={handleOnSearch}> Agregar </button>
+      <button onClick={handleOnSearch}>
+      <FiSearch/>
+          </button>
     </div>
   );
 }

@@ -1,8 +1,11 @@
 :root{
 
   --color-maximun-red: #d62828 ;
+  --color-prussian-blue: #023047;
 
   --btn-danger-color: var(--color-maximun-red);
+  --btn-color: var(var(--color-prussian-blue));
+  
 }
 
 
@@ -12,6 +15,9 @@ body {
   font-family: 'Oswald', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+input{
+  font-family: 'Oswald', sans-serif;
 }
 
 code {
