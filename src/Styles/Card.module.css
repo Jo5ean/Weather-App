@@ -1,20 +1,63 @@
-.cardCain {
-    display: grid;
-    grid-template-columns: repet (3, 1fr);
-    grid-template-rows: 1fr 2fr;
-
-    width: 200px;
-    background-color: cornflowerblue;
-    border: 2px solid rgb(13, 68, 94);
+.card {
+    border-style: solid;
     border-width: 2px;
-    border-radius: 20px;
+    border-color: black;
+    border-radius: 0.5rem;
+
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    align-items: center ;
+
+    position: relative;
+
+   /* width: 200px;
+    background-color: cornflowerblue;
+    
+    
     gap: 10px;
-    justify-content: center;
+    justify-content: center; */
     /* height: 300px; */
 }
 
+.cityName{
+    grid-column: 1/ span 3;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 .btnCard{
 
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    font-size: 1rem;
+    color: var(--btn-danger-color);
 
 
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.25rem;
+    border-radius: 10px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    background-color: transparent;
+
+    transition: 250ms;
+
+}
+
+.btnCard:hover{
+
+    color: white;
+    background-color: var(--btn-danger-color);
+}
+
+@media screen and (min-width: 576px){
+    .card{
+        width: 25rem;
+    }
 }

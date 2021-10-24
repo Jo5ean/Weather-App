@@ -1,13 +1,14 @@
 import React from "react";
 //import cities from '../data';//z
-import Card from "./Card";
+import Card from "./Card"; 
+import Styles from '../Styles/Cards.module.css'
 
 export default function Cards(props) {
   // acá va tu código
   // tip, podés usar un map
 
   return (
-    <div>
+    <div className={Styles.cards}>
       {props.cities ? (
         props.cities.map((city) => (
           <Card
