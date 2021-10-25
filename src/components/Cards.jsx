@@ -3,27 +3,24 @@ import React from "react";
 import Card from "./Card"; 
 import Styles from '../Styles/Cards.module.css'
 
-export default function Cards(props) {
+export default function Cards({cities, onRemove}) {
   // acá va tu código
   // tip, podés usar un map
 
   return (
-    <div className={Styles.cards}>
-      {props.cities ? (
-        props.cities.map((city) => (
+    <div className={Styles.Cards}>
+        { cities.map((city) => (
           <Card
           key={city.id}
             name={city.name}
-            min={city.main.temp_min}
-            max={city.main.temp_max}
-            img={city.weather[0].icon}
-            onClose={()=>alert(city.name)}
+            min={city.min}
+            max={city.max}
+            img={city.img}
+
+            onClose={()=>onRemove(city.id)}
             
           />
-        ))
-      ) : (
-        <h2>Error 040, cerebro not found!</h2>
-      )}
+        ))}
     </div>
   );
 }
