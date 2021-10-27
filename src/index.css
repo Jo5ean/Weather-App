@@ -1,8 +1,10 @@
 :root{
 
   --color-maximun-red: #d62828 ;
+  --color-prussian-blue: #003153;
 
   --btn-danger-color: var(--color-maximun-red);
+  --btn-color: var(--color-prussian-blue);
 }
 
 

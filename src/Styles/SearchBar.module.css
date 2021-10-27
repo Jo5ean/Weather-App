@@ -19,8 +19,9 @@
     position: absolute;
     top: calc(0.25rem + 2px);
     right: calc(0.25rem + 2px);
+    bottom: 0.25rem;
     font-size: 1.5rem;
-    color: var(--btn-danger-color);
+    color: var(--btn-color);
 
     display: flex;
     justify-content: center;
